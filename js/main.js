@@ -44,7 +44,24 @@ function showInConsole(data) {
 
     };
     console.log(data); // De data word hier in de console gezet 
-    sidebar.innerHTML = "<p>" + data.games+ "</p>";
+    sidebar.innerHTML = "<p>" + data.games+ "</p>"; //met dit geeft het alleen object aan daarom hierbenden
+    sidebar.innerHTML = `
+    <div>
+        <div>
+            <div>${"Fortnite: A popular online multiplayer battle royale game with building mechanics. price: 0"}</div>
+            <div>${"The Legend of Zelda: Breath of the Wild: A critically acclaimed action-adventure game in the iconic Zelda series. price: 59.99,"}</div>
+            <div>${"Grand Theft Auto V:A crime-based action-adventure game set in a sprawling open world. price: 39.99,"}</div>
+            <div>${"Minecraft:A sandbox building game that allows players to create and explore virtual worlds. price: 19.99,"}</div>
+            <div>${"Red Dead Redemption 2: An immersive open-world game set in the Wild West era. price: 49.99,"}</div>
+            <div>${"FIFA 22: Wild Hunt: Breath of the Wild: An epic open-world RPG set in a dark fantasy universe. price: 29.99,"}</div>
+            <div>${"Animal Crossing: New Horizons: Wild Hunt: Breath of the Wild: An epic open-world RPG set in a dark fantasy universe. price: 29.99,"}</div>
+            <div>${"Assassin's Creed Valhalla: Warzone: Wild Hunt: Breath of the Wild: An epic open-world RPG set in a dark fantasy universe. price: 29.99,"}</div>
+            <div>${"Super Mario Odyssey: Wild Hunt: Breath of the Wild: An epic open-world RPG set in a dark fantasy universe. price: 29.99,"}</div>
+            <div>${"Cyberpunk 2077: Wild Hunt: Breath of the Wild: An epic open-world RPG set in a dark fantasy universe. price: 29.99,"}</div>
+            <div>${"Call of Duty: Warzone: Wild Hunt: Breath of the Wild: An epic open-world RPG set in a dark fantasy universe. price: 29.99,"}</div>
+        </div>
+    </div>
+    `;
 };
 
 price.innerHTML += 0;
