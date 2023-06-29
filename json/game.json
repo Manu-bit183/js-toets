@@ -1,0 +1,76 @@
+{
+  "games": [
+    {
+      "name": "The Witcher 3: Wild Hunt",
+      "description": "An epic open-world RPG set in a dark fantasy universe.",
+      "price": 29.99,
+      "platforms": ["PlayStation 4", "Xbox One", "Nintendo Switch", "PC"]
+    },
+    {
+      "name": "Grand Theft Auto V",
+      "description": "A crime-based action-adventure game set in a sprawling open world.",
+      "price": 39.99,
+      "platforms": ["PlayStation 5", "Xbox Series X/S", "PlayStation 4", "Xbox One", "PC"]
+    },
+    {
+      "name": "The Legend of Zelda: Breath of the Wild",
+      "description": "A critically acclaimed action-adventure game in the iconic Zelda series.",
+      "price": 59.99,
+      "platforms": ["Nintendo Switch", "Wii U"]
+    },
+    {
+      "name": "Fortnite",
+      "description": "A popular online multiplayer battle royale game with building mechanics.",
+      "price": 0,
+      "platforms": ["PlayStation 5", "Xbox Series X/S", "PlayStation 4", "Xbox One", "Nintendo Switch", "PC", "iOS", "Android"]
+    },
+    {
+      "name": "Minecraft",
+      "description": "A sandbox building game that allows players to create and explore virtual worlds.",
+      "price": 19.99,
+      "platforms": ["PlayStation 4", "Xbox One", "Nintendo Switch", "PC", "iOS", "Android"]
+    },
+    {
+      "name": "Red Dead Redemption 2",
+      "description": "An immersive open-world game set in the Wild West era.",
+      "price": 49.99,
+      "platforms": ["PlayStation 5", "Xbox Series X/S", "PlayStation 4", "Xbox One", "PC"]
+    },
+    {
+      "name": "FIFA 22",
+      "description": "The latest installment in the popular soccer simulation game series.",
+      "price": 59.99,
+      "platforms": ["PlayStation 5", "Xbox Series X/S", "PlayStation 4", "Xbox One", "PC"]
+    },
+    {
+      "name": "Animal Crossing: New Horizons",
+      "description": "A delightful life simulation game where players create their own island paradise.",
+      "price": 49.99,
+      "platforms": ["Nintendo Switch"]
+    },
+    {
+      "name": "Call of Duty: Warzone",
+      "description": "A free-to-play battle royale game with intense multiplayer combat.",
+      "price": 59.99,
+      "platforms": ["PlayStation 5", "Xbox Series X/S", "PlayStation 4", "Xbox One", "PC"]
+    },
+    {
+      "name": "Assassin's Creed Valhalla",
+      "description": "A Viking-themed action-adventure game set in a historical open world.",
+      "price": 59.99,
+      "platforms": ["PlayStation 5", "Xbox Series X/S", "PlayStation 4", "Xbox One", "PC"]
+    },
+    {
+      "name": "Super Mario Odyssey",
+      "description": "A charming platformer featuring Mario's journey across various colorful worlds.",
+      "price": 49.99,
+      "platforms": ["Nintendo Switch"]
+    },
+    {
+      "name": "Cyberpunk 2077",
+      "description": "A futuristic open-world RPG set in the sprawling Night City.",
+      "price": 59.99,
+      "platforms": ["PlayStation 5", "Xbox Series X/S", "PlayStation 4", "Xbox One", "PC"]
+    }
+  ]
+}
