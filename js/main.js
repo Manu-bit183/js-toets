@@ -2,7 +2,8 @@ console.log('main loaded');
 
 const gameOne = {
     name: "Assassin's Creed Mirage", // object 1 met name en price
-    price: 59.99
+    price: 59.99,
+    showprice : function() { alert(this.price); }
 };
 
 const gameTwo = {
@@ -19,6 +20,7 @@ const gameFour = {
     name: 'Hogwarts Legacy Deluxe Edition',// object 4 met name en price
     price: 89.99
 };
+
 
 // alle querySelctors
 let button = document.querySelector('.cta'); // buttons van de cards
@@ -39,37 +41,37 @@ fetch('/json/game.json')
 function showInConsole(data) {
     for (let i = 0; i < data.length; i++) {
         const data = data[i];
-        
-    }
+
+    };
     console.log(data); // De data word hier in de console gezet 
-    sidebar.innerHTML = "<p>" + data.games + "</p>";
+    sidebar.innerHTML = "<p>" + data.games+ "</p>";
 };
 
 price.innerHTML += 0;
 
 let count = 0; // Dit is de count van hoeveel games je hebt
 let plus = 1; // Dit komt er elke keer bij 
-result = count + plus;
+result = count + plus
 
 
-button.addEventListener("click", () => {
-    button.textContent = count + result++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
-    price.textContent = count + result++// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+button.addEventListener("click", function () {
+    button.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    price.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
 });
 
-secondbutton.addEventListener("click", () => {
-    secondbutton.textContent = count + result++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
-    secondprice.textContent = count + result++// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+secondbutton.addEventListener("click", function() {
+    secondbutton.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    secondprice.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
 });
 
-thirthbutton.addEventListener("click", () => {
-    thirthbutton.textContent = count + result++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
-    thirthprice.textContent = count + result++// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+thirthbutton.addEventListener("click", function() {
+    thirthbutton.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    thirthprice.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
 });
 
-forthbutton.addEventListener("click", () => {
-    forthbutton.textContent = count + result++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
-    forthprice.textContent = count + result++// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+forthbutton.addEventListener("click", function() {
+    forthbutton.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    forthprice.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
 });
 
 
