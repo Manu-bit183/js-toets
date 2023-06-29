@@ -30,14 +30,17 @@ fetch('/json/game.json')
     .then(jsonData => showInConsole(jsonData));
 
 function showInConsole(data) {
+    for (let i = 0; i < data.length; i++) {
+        const data = data[i];
+        console.log(data); // De data word hier in de console gezet 
+        sidebar.innerHTML += `<div>${data.description}</div>`// De data moet in de ul komen 
+}
     console.log(data); // De data word hier in de console gezet 
     sidebar.innerHTML = "<li>" + data + "</li>";
 };
 
-button.innerHTML += `
-<div class="table">
-    <ul>
-        <li>${data.games.price}</li>
-    </ul>
-</div>
-`
+price.innerHTML += 0;
+
+button.addEventListener("click", (event) => {
+    button.textContent = "+ 1 ";
+});
