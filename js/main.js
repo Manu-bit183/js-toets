@@ -20,31 +20,24 @@ const gameFour = {
     price: 89.99
 };
 
-let button = document.querySelector('.cta');
-let price = document.querySelector('.total-price');
-let sidebox = document.querySelector('.box right-sidebar');
-
-button.addEventListener("click", (event) => {
-    button.textContent = `Click count: ${event.detail}`;
-});
+let button = document.querySelector('.cta'); // buttons van de cards
+let price = document.querySelector('.total-price'); // rechter sidebar in html
+let sidebar = document.querySelector('.games'); // linker siderbar in html
 
 //De fetch word hier opgehaald
 fetch('/json/game.json')
-    .then(myData => myData.text())
-    .then(textData => showGames(textData));
+    .then(myData => myData.json())
+    .then(jsonData => showInConsole(jsonData));
 
-function showGames(data) {
+function showInConsole(data) {
     console.log(data); // De data word hier in de console gezet 
-
-    let list = '<ul>'
-    list = `
-    <li>${data.name}</li>
-    <li>${data.description}</li>
-    <li>${data.price}</li>
-    <li>${data.platform}</li>
-    `
-    list = "</ul>"
-    sidebox.innerHTML += list
-    return list
+    sidebar.innerHTML = "<li>" + data + "</li>";
 };
 
+button.innerHTML += `
+<div class="table">
+    <ul>
+        <li>${data.games.price}</li>
+    </ul>
+</div>
+`
