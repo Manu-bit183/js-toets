@@ -2,8 +2,7 @@ console.log('main loaded');
 
 const gameOne = {
     name: "Assassin's Creed Mirage", // object 1 met name en price
-    price: 59.99,
-    showprice : function() { alert(this.price); }
+    price: 59.99
 };
 
 const gameTwo = {
@@ -31,10 +30,11 @@ let price = document.querySelector('.total-price1'); // rechter sidebar in html
 let secondprice = document.querySelector('.total-price2'); // rechter sidebar in html
 let thirthprice = document.querySelector('.total-price3'); // rechter sidebar in html
 let forthprice = document.querySelector('.total-price4'); // rechter sidebar in html
+let total = document.querySelector('.total'); // rechter sidebar in html
 let sidebar = document.querySelector('.games'); // linker siderbar in html
 
 //De fetch word hier opgehaald
-fetch('/json/game.json')
+fetch('/json/game.json') //json data word opgehaald
     .then(myData => myData.json())
     .then(jsonData => showInConsole(jsonData));
 
@@ -53,42 +53,51 @@ function showInConsole(data) {
             <div>${"Grand Theft Auto V:A crime-based action-adventure game set in a sprawling open world. price: 39.99,"}</div>
             <div>${"Minecraft:A sandbox building game that allows players to create and explore virtual worlds. price: 19.99,"}</div>
             <div>${"Red Dead Redemption 2: An immersive open-world game set in the Wild West era. price: 49.99,"}</div>
-            <div>${"FIFA 22: Wild Hunt: Breath of the Wild: An epic open-world RPG set in a dark fantasy universe. price: 29.99,"}</div>
-            <div>${"Animal Crossing: New Horizons: Wild Hunt: Breath of the Wild: An epic open-world RPG set in a dark fantasy universe. price: 29.99,"}</div>
-            <div>${"Assassin's Creed Valhalla: Warzone: Wild Hunt: Breath of the Wild: An epic open-world RPG set in a dark fantasy universe. price: 29.99,"}</div>
-            <div>${"Super Mario Odyssey: Wild Hunt: Breath of the Wild: An epic open-world RPG set in a dark fantasy universe. price: 29.99,"}</div>
-            <div>${"Cyberpunk 2077: Wild Hunt: Breath of the Wild: An epic open-world RPG set in a dark fantasy universe. price: 29.99,"}</div>
-            <div>${"Call of Duty: Warzone: Wild Hunt: Breath of the Wild: An epic open-world RPG set in a dark fantasy universe. price: 29.99,"}</div>
-        </div>
+            <div>${"FIFA 22:The latest installment in the popular soccer simulation game series price: 59.99,"}</div>
+            <div>${"Animal Crossing:A delightful life simulation game where players create their own island paradise. price: 49.99,"}</div>
+            <div>${"Assassin's Creed Valhalla: A Viking-themed action-adventure game set in a historical open world. price: 59.99,"}</div>
+            <div>${"Super Mario Odyssey:A charming platformer featuring Mario's journey across various colorful worlds. price: 49.99,"}</div>
+            <div>${"Cyberpunk 2077: A futuristic open-world RPG set in the sprawling Night City.. price: 59.99,"}</div>
+            <div>${"Call of Duty: Warzone: A free-to-play battle royale game with intense multiplayer combat. price: 59.99,"}</div>
+            <div>${"The Witcher 3: Wild Hunt: A crime-based action-adventure game set in a sprawling open world. price: 29.99,"}</div>
     </div>
     `;
-};
+}; // Dit was een alterntief omdat de object moeilijk deed 
 
 price.innerHTML += 0;
 
 let count = 0; // Dit is de count van hoeveel games je hebt
+let count2 = 0; // Dit is de count van hoeveel games je hebt
+let count3 = 0; // Dit is de count van hoeveel games je hebt
+let count4 = 0; // Dit is de count van hoeveel games je hebt
 let plus = 1; // Dit komt er elke keer bij 
-result = count + plus
+let plus2 = 1; // Dit komt er elke keer bij 
+let plus3 = 1; // Dit komt er elke keer bij 
+let plus4 = 1; // Dit komt er elke keer bij 
 
 
 button.addEventListener("click", function () {
-    button.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    button.textContent = count + 1// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     price.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    total.innerHTML = 59,99 * price
 });
 
 secondbutton.addEventListener("click", function() {
-    secondbutton.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
-    secondprice.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    secondbutton.textContent = count2 + 1;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    secondprice.textContent = count2 + plus2++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    total.innerHTML = 69,99 * price
 });
 
 thirthbutton.addEventListener("click", function() {
-    thirthbutton.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
-    thirthprice.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    thirthbutton.textContent = count3 + 1;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    thirthprice.textContent = count3 + plus3++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    total.innerHTML = 79,99 * price
 });
 
 forthbutton.addEventListener("click", function() {
-    forthbutton.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
-    forthprice.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    forthbutton.textContent = count4 + 1;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    forthprice.textContent = count4 + plus4++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    total.innerHTML = 89,99 * price
 });
 
 
