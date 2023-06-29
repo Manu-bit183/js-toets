@@ -20,11 +20,15 @@ const gameFour = {
     price: 89.99
 };
 
+// alle querySelctors
 let button = document.querySelector('.cta'); // buttons van de cards
 let secondbutton = document.querySelector('.second'); // buttons van de cards
 let thirthbutton = document.querySelector('.thirth'); // buttons van de cards
 let forthbutton = document.querySelector('.forth'); // buttons van de cards
-let price = document.querySelector('.total-price'); // rechter sidebar in html
+let price = document.querySelector('.total-price1'); // rechter sidebar in html
+let secondprice = document.querySelector('.total-price2'); // rechter sidebar in html
+let thirthprice = document.querySelector('.total-price3'); // rechter sidebar in html
+let forthprice = document.querySelector('.total-price4'); // rechter sidebar in html
 let sidebar = document.querySelector('.games'); // linker siderbar in html
 
 //De fetch word hier opgehaald
@@ -33,30 +37,39 @@ fetch('/json/game.json')
     .then(jsonData => showInConsole(jsonData));
 
 function showInConsole(data) {
+    for (let i = 0; i < data.length; i++) {
+        const data = data[i];
+        
+    }
     console.log(data); // De data word hier in de console gezet 
     sidebar.innerHTML = "<p>" + data.games + "</p>";
 };
 
 price.innerHTML += 0;
+
 let count = 0; // Dit is de count van hoeveel games je hebt
 let plus = 1; // Dit komt er elke keer bij 
 result = count + plus;
-result = result + 1
+
 
 button.addEventListener("click", () => {
-    button.textContent = count + result;
+    button.textContent = count + result++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    price.textContent = count + result++// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
 });
 
 secondbutton.addEventListener("click", () => {
-    secondbutton.textContent = count + result;
+    secondbutton.textContent = count + result++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    secondprice.textContent = count + result++// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
 });
 
 thirthbutton.addEventListener("click", () => {
-    thirthbutton.textContent = count + result;
+    thirthbutton.textContent = count + result++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    thirthprice.textContent = count + result++// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
 });
 
 forthbutton.addEventListener("click", () => {
-    forthbutton.textContent = count + result;
+    forthbutton.textContent = count + result++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    forthprice.textContent = count + result++// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
 });
 
 
