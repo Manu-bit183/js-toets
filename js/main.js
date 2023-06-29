@@ -24,12 +24,17 @@ let button = document.querySelector('.cta');
 let price = document.querySelector('.total-price');
 let games = document.querySelector('.box right-sidebar');
 
+button.addEventListener("click", (event) => {
+    button.textContent = `Click count: ${event.detail}`;
+});
+
 //De fetch word hier opgehaald
 fetch('/json/game.json')
-.then(myData => myData.text())
-.then(textData => showGame(textData));
+    .then(myData => myData.text())
+    .then(textData => showGame(textData));
 
 function showGame(data) {
-    console.log(data); // De data word hier in de console gezet
-    document.games.innerHTML += "<h2>" +data+ "</h2>"
+    console.log(data); // De data word hier in de console gezet 
+    this.innerHTML = "Content";
 };
+
