@@ -21,6 +21,9 @@ const gameFour = {
 };
 
 let button = document.querySelector('.cta'); // buttons van de cards
+let secondbutton = document.querySelector('.second'); // buttons van de cards
+let thirthbutton = document.querySelector('.thirth'); // buttons van de cards
+let forthbutton = document.querySelector('.forth'); // buttons van de cards
 let price = document.querySelector('.total-price'); // rechter sidebar in html
 let sidebar = document.querySelector('.games'); // linker siderbar in html
 
@@ -30,17 +33,30 @@ fetch('/json/game.json')
     .then(jsonData => showInConsole(jsonData));
 
 function showInConsole(data) {
-    for (let i = 0; i < data.length; i++) {
-        const data = data[i];
-        console.log(data); // De data word hier in de console gezet 
-        sidebar.innerHTML += `<div>${data.description}</div>`// De data moet in de ul komen 
-}
     console.log(data); // De data word hier in de console gezet 
-    sidebar.innerHTML = "<li>" + data + "</li>";
+    sidebar.innerHTML = "<p>" + data.games + "</p>";
 };
 
 price.innerHTML += 0;
+let count = 0; // Dit is de count van hoeveel games je hebt
+let plus = 1; // Dit komt er elke keer bij 
+result = count + plus;
+result = result + 1
 
-button.addEventListener("click", (event) => {
-    button.textContent = "+ 1 ";
+button.addEventListener("click", () => {
+    button.textContent = count + result;
 });
+
+secondbutton.addEventListener("click", () => {
+    secondbutton.textContent = count + result;
+});
+
+thirthbutton.addEventListener("click", () => {
+    thirthbutton.textContent = count + result;
+});
+
+forthbutton.addEventListener("click", () => {
+    forthbutton.textContent = count + result;
+});
+
+
