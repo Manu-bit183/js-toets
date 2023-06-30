@@ -20,6 +20,13 @@ const gameFour = {
     price: 89.99
 };
 
+function hasPerson(price) {
+    return price in gameOne;
+  }
+  
+  function getAge(price) {
+    return gameOne[price];
+  }
 
 // alle 14 querySelctors
 let button = document.querySelector('.first'); // buttons van de cards
@@ -119,4 +126,4 @@ min4button.addEventListener("click", function () {
     forthprice.textContent = count4 - minus4--// Zorgt ervoor dat de button de omlaag haald po de pagina
 });
 
-totaal.innerHTML += gameOne.name
+total.innerHTML += gameOne.price[1] + gameOne.price[2] + gameOne.price[3] + gameOne.price[4]
