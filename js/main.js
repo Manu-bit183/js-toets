@@ -118,3 +118,5 @@ min4button.addEventListener("click", function () {
     min4button.textContent = count4 + 1// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     forthprice.textContent = count4 - minus4--// Zorgt ervoor dat de button de omlaag haald po de pagina
 });
+
+totaal.innerHTML += gameOne.name
