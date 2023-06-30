@@ -20,14 +20,6 @@ const gameFour = {
     price: 89.99
 };
 
-function hasPerson(price) {
-    return price in gameOne;
-  }
-  
-  function getAge(price) {
-    return gameOne[price];
-  }
-
 // alle 14 querySelctors
 let button = document.querySelector('.first'); // buttons van de cards
 let secondbutton = document.querySelector('.second'); // buttons van de cards
@@ -37,12 +29,21 @@ let min1button = document.querySelector('.min-1'); // buttons van de cards
 let min2button = document.querySelector('.min-2'); // buttons van de cards
 let min3button = document.querySelector('.min-3'); // buttons van de cards
 let min4button = document.querySelector('.min-4'); // buttons van de cards
+let inclusive = document.querySelector('.every-game'); // rechter sidebar in html
 let price = document.querySelector('.total-price1'); // rechter sidebar in html
 let secondprice = document.querySelector('.total-price2'); // rechter sidebar in html
 let thirthprice = document.querySelector('.total-price3'); // rechter sidebar in html
 let forthprice = document.querySelector('.total-price4'); // rechter sidebar in html
-let total = document.querySelector('.total'); // rechter sidebar in html
+let total = document.querySelector('.game'); // rechter sidebar in html
 let sidebar = document.querySelector('.games'); // linker siderbar in html
+
+let array = [gameOne,gameTwo,gameThree,gameFour];
+
+for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    console.log(element);
+    inclusive.innerHTML += `<p class="price-item"> + ${element.name}, &euro;${element.price} </p>`;// Dit zorgt ervoor dat het zicht baar is op de pagina`
+}
 
 //De fetch word hier opgehaald
 fetch('/json/game.json') //json data word opgehaald
@@ -58,8 +59,6 @@ function showInPage(data) {
     };
 
 };
-
-price.innerHTML += "0 items In je winkel wagen";
 
 let count = 0; // Dit is de count van hoeveel games je hebt
 let count2 = 0; // Dit is de count van hoeveel games je hebt
@@ -126,4 +125,4 @@ min4button.addEventListener("click", function () {
     forthprice.textContent = count4 - minus4--// Zorgt ervoor dat de button de omlaag haald po de pagina
 });
 
-total.innerHTML += gameOne.price[1] + gameOne.price[2] + gameOne.price[3] + gameOne.price[4]
+total.innerHTML += gameOne.price + gameTwo.price + gameThree.price + gameFour.price
