@@ -46,13 +46,11 @@ fetch('/json/game.json') //json data word opgehaald
 function showInPage(data) {
     for (let i = 0; i < data.games.length; i++) {
         const game = data.games[i];
-        console.log(game);
-        sidebar.innerHTML += `<p class="price-item"> + ${game.name}:${game.description} en wlke platform:${game.platform}: ${game.price} </p>`;
+        console.log(game);// De data word hier in de console gezet
+        sidebar.innerHTML += `<p class="price-item"> + ${game.name}:${game.description} en wlke platform:${game.platform}: ${game.price} </p>`;// Dit zorgt ervoor dat het zicht baar is op de pagina
     };
-     // De data word hier in de console gezet 
-     //met dit geeft het alleen object aan daarom hierbenden
 
-}; // Dit was een alterntief omdat de object moeilijk deed 
+};
 
 price.innerHTML += "0 items In je winkel wagen";
 
@@ -78,8 +76,8 @@ button.addEventListener("click", function () {
 
 // Dit zorgt ervoor dat de aantal naar beneden gaat
 min1button.addEventListener("click", function () {
-    button.textContent = count2 + 1// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
-    price.textContent = count2 - minus2--
+    min1button.textContent = count + 1// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    price.textContent = count - minus--// Zorgt ervoor dat de button de omlaag haald po de pagina
 });
 
 // Dit is voor de plus button 
@@ -91,8 +89,8 @@ secondbutton.addEventListener("click", function() {
 
 // Dit zorgt ervoor dat de aantal naar beneden gaat
 min2button.addEventListener("click", function () {
-    button.textContent = count3 + 1// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
-    price.textContent = count3 - minus3--
+    min2button.textContent = count2 + 1// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    secondprice.textContent = count2 - minus2--// Zorgt ervoor dat de button de omlaag haald po de pagina
 });
 
 // Dit is voor de plus button 
@@ -103,9 +101,9 @@ thirthbutton.addEventListener("click", function() {
 });
 
 // Dit zorgt ervoor dat de aantal naar beneden gaat
-min4button.addEventListener("click", function () {
-    button.textContent = count4 + 1// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
-    price.textContent = count4 - minus4--
+min3button.addEventListener("click", function () {
+    min3button.textContent = count3 + 1// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    thirthprice.textContent = count3 - minus3--// Zorgt ervoor dat de button de omlaag haald po de pagina
 });
 
 // Dit is voor de plus button 
@@ -115,4 +113,9 @@ forthbutton.addEventListener("click", function() {
     total.innerHTML = 89,99 * price// verandert de totale price
 });
 
+// Dit zorgt ervoor dat de aantal naar beneden gaat
+min4button.addEventListener("click", function () {
+    min4button.textContent = count4 + 1// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    forthprice.textContent = count4 - minus4--// Zorgt ervoor dat de button de omlaag haald po de pagina
+});
 
