@@ -47,7 +47,7 @@ function showInPage(data) {
     for (let i = 0; i < data.games.length; i++) {
         const game = data.games[i];
         console.log(game);// De data word hier in de console gezet
-        sidebar.innerHTML += `<p class="price-item"> + ${game.name}:${game.description} en wlke platform:${game.platform}: ${game.price} </p>`;// Dit zorgt ervoor dat het zicht baar is op de pagina
+        sidebar.innerHTML += `<p class="price-item"> + ${game.name}:${game.description} en wlke platform:${game.platform}: &euro;${game.price} </p>`;// Dit zorgt ervoor dat het zicht baar is op de pagina
     };
 
 };
