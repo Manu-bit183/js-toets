@@ -21,7 +21,7 @@ const gameFour = {
 };
 
 
-// alle querySelctors
+// alle 14 querySelctors
 let button = document.querySelector('.first'); // buttons van de cards
 let secondbutton = document.querySelector('.second'); // buttons van de cards
 let thirthbutton = document.querySelector('.thirth'); // buttons van de cards
@@ -71,7 +71,7 @@ let minus4 = 1;// Dit gaat er elke keer af
 button.addEventListener("click", function () {
     button.textContent = count + 1// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     price.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
-    total.innerHTML = 59, 99 * price// verandert de totale price
+    total.innerHTML = 59,99 * price// verandert de totale price
 });
 
 // Dit zorgt ervoor dat de aantal naar beneden gaat
@@ -84,7 +84,7 @@ min1button.addEventListener("click", function () {
 secondbutton.addEventListener("click", function () {
     secondbutton.textContent = count2 + 1;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     secondprice.textContent = count2 + plus2++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
-    total.innerHTML = 69, 99 * price// verandert de totale price
+    total.innerHTML = 69,99 * price// verandert de totale price
 });
 
 // Dit zorgt ervoor dat de aantal naar beneden gaat
@@ -97,7 +97,7 @@ min2button.addEventListener("click", function () {
 thirthbutton.addEventListener("click", function () {
     thirthbutton.textContent = count3 + 1;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     thirthprice.textContent = count3 + plus3++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
-    total.innerHTML = 79, 99 * price// verandert de totale price
+    total.innerHTML = 79,99 * price// verandert de totale price
 });
 
 // Dit zorgt ervoor dat de aantal naar beneden gaat
@@ -110,7 +110,7 @@ min3button.addEventListener("click", function () {
 forthbutton.addEventListener("click", function () {
     forthbutton.textContent = count4 + 1;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     forthprice.textContent = count4 + plus4++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
-    total.innerHTML = 89, 99 * price// verandert de totale price
+    total.innerHTML += 89,09 * price// verandert de totale price
 });
 
 // Dit zorgt ervoor dat de aantal naar beneden gaat
@@ -118,4 +118,3 @@ min4button.addEventListener("click", function () {
     min4button.textContent = count4 + 1// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     forthprice.textContent = count4 - minus4--// Zorgt ervoor dat de button de omlaag haald po de pagina
 });
-
