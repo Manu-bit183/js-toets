@@ -64,7 +64,7 @@ function showInConsole(data) {
     `;
 }; // Dit was een alterntief omdat de object moeilijk deed 
 
-price.innerHTML += 0;
+price.innerHTML += "0 items In je winkel wagen";
 
 let count = 0; // Dit is de count van hoeveel games je hebt
 let count2 = 0; // Dit is de count van hoeveel games je hebt
@@ -79,25 +79,25 @@ let plus4 = 1; // Dit komt er elke keer bij
 button.addEventListener("click", function () {
     button.textContent = count + 1// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     price.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
-    total.innerHTML = 59,99 * price
+    total.innerHTML = 59,99 * price// verandert de totale price
 });
 
 secondbutton.addEventListener("click", function() {
     secondbutton.textContent = count2 + 1;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     secondprice.textContent = count2 + plus2++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
-    total.innerHTML = 69,99 * price
+    total.innerHTML = 69,99 * price// verandert de totale price
 });
 
 thirthbutton.addEventListener("click", function() {
     thirthbutton.textContent = count3 + 1;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     thirthprice.textContent = count3 + plus3++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
-    total.innerHTML = 79,99 * price
+    total.innerHTML = 79,99 * price// verandert de totale price
 });
 
 forthbutton.addEventListener("click", function() {
     forthbutton.textContent = count4 + 1;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     forthprice.textContent = count4 + plus4++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
-    total.innerHTML = 89,99 * price
+    total.innerHTML = 89,99 * price// verandert de totale price
 });
 
 
