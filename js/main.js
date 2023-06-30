@@ -43,7 +43,6 @@ let array = [gameOne,gameTwo,gameThree,gameFour];
 for (let i = 0; i < array.length; i++) {
     const element = array[i];
     console.log(element);
-    inclusive.innerHTML += `<p class="price-item"> + ${element.name}, &euro;${element.price} </p>`;// Dit zorgt ervoor dat het zicht baar is op de pagina`
 }
 
 //De fetch word hier opgehaald
@@ -61,10 +60,10 @@ function showInPage(data) {
 
 };
 
-let count = 0; // Dit is de count van hoeveel games je hebt
-let count2 = 0; // Dit is de count van hoeveel games je hebt
-let count3 = 0; // Dit is de count van hoeveel games je hebt
-let count4 = 0; // Dit is de count van hoeveel games je hebt
+let count = `${gameOne.name}`; // Dit is de count van hoeveel games je hebt
+let count2 = `${gameTwo.name}`; // Dit is de count van hoeveel games je hebt
+let count3 = `${gameThree.name}`; // Dit is de count van hoeveel games je hebt
+let count4 = `${gameFour.name}`; // Dit is de count van hoeveel games je hebt
 let plus = 1; // Dit komt er elke keer bij 
 let plus2 = 1; // Dit komt er elke keer bij 
 let plus3 = 1; // Dit komt er elke keer bij 
@@ -78,7 +77,7 @@ let minus4 = 1;// Dit gaat er elke keer af
 firstBtn.addEventListener("click", function () {
     firstBtn.textContent = count;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     price.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
-    game.innerHTML = gameOne.price; // verandert de totale price
+    total.innerHTML = gameOne.price; // verandert de totale price
 });
 
 // Dit zorgt ervoor dat de aantal naar beneden gaat
@@ -89,7 +88,7 @@ min1Btn.addEventListener("click", function () {
 
 // Dit is voor de plus button 
 secondBtn.addEventListener("click", function () {
-    secondBtn.textContent = count;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    secondBtn.textContent = count2;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     secondprice.textContent = count2 + plus2++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     total.innerHTML = gameTwo.price;// verandert de totale price
 });
@@ -126,4 +125,4 @@ min4Btn.addEventListener("click", function () {
     forthprice.textContent = count4 - minus4--;// Zorgt ervoor dat de button de omlaag haald po de pagina
 });
 
-total.innerHTML += gameOne.price + gameTwo.price + gameThree.price + gameFour.price
+number.innerHTML += gameOne.price + gameTwo.price + gameThree.price + gameFour.price
