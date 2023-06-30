@@ -36,32 +36,18 @@ let sidebar = document.querySelector('.games'); // linker siderbar in html
 //De fetch word hier opgehaald
 fetch('/json/game.json') //json data word opgehaald
     .then(myData => myData.json())
-    .then(jsonData => showInConsole(jsonData));
+    .then(jsonData => showInPage(jsonData));
 
-function showInConsole(data) {
-    for (let i = 0; i < data.length; i++) {
-        const data = data[i];
-
+ //met dit geeft het alleen object aan daarom hierbenden
+function showInPage(data) {
+    for (let i = 0; i < data.games.length; i++) {
+        const game = data.games[i];
+        console.log(game);
+        sidebar.innerHTML += `<p> + ${game.name}:${game.description} en wlke platform:${game.platform}: ${game.price} </p>`;
     };
-    console.log(data); // De data word hier in de console gezet 
-    sidebar.innerHTML = "<p>" + data.games+ "</p>"; //met dit geeft het alleen object aan daarom hierbenden
-    sidebar.innerHTML = `
-    <div>
-        <div>
-            <div>${"Fortnite: A popular online multiplayer battle royale game with building mechanics. price: 0"}</div>
-            <div>${"The Legend of Zelda: Breath of the Wild: A critically acclaimed action-adventure game in the iconic Zelda series. price: 59.99,"}</div>
-            <div>${"Grand Theft Auto V:A crime-based action-adventure game set in a sprawling open world. price: 39.99,"}</div>
-            <div>${"Minecraft:A sandbox building game that allows players to create and explore virtual worlds. price: 19.99,"}</div>
-            <div>${"Red Dead Redemption 2: An immersive open-world game set in the Wild West era. price: 49.99,"}</div>
-            <div>${"FIFA 22:The latest installment in the popular soccer simulation game series price: 59.99,"}</div>
-            <div>${"Animal Crossing:A delightful life simulation game where players create their own island paradise. price: 49.99,"}</div>
-            <div>${"Assassin's Creed Valhalla: A Viking-themed action-adventure game set in a historical open world. price: 59.99,"}</div>
-            <div>${"Super Mario Odyssey:A charming platformer featuring Mario's journey across various colorful worlds. price: 49.99,"}</div>
-            <div>${"Cyberpunk 2077: A futuristic open-world RPG set in the sprawling Night City.. price: 59.99,"}</div>
-            <div>${"Call of Duty: Warzone: A free-to-play battle royale game with intense multiplayer combat. price: 59.99,"}</div>
-            <div>${"The Witcher 3: Wild Hunt: A crime-based action-adventure game set in a sprawling open world. price: 29.99,"}</div>
-    </div>
-    `;
+     // De data word hier in de console gezet 
+     //met dit geeft het alleen object aan daarom hierbenden
+
 }; // Dit was een alterntief omdat de object moeilijk deed 
 
 price.innerHTML += "0 items In je winkel wagen";
