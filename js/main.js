@@ -22,10 +22,14 @@ const gameFour = {
 
 
 // alle querySelctors
-let button = document.querySelector('.cta'); // buttons van de cards
+let button = document.querySelector('.first'); // buttons van de cards
 let secondbutton = document.querySelector('.second'); // buttons van de cards
 let thirthbutton = document.querySelector('.thirth'); // buttons van de cards
 let forthbutton = document.querySelector('.forth'); // buttons van de cards
+let min1button = document.querySelector('.min-1'); // buttons van de cards
+let min2button = document.querySelector('.min-2'); // buttons van de cards
+let min3button = document.querySelector('.min-3'); // buttons van de cards
+let min4button = document.querySelector('.min-4'); // buttons van de cards
 let price = document.querySelector('.total-price1'); // rechter sidebar in html
 let secondprice = document.querySelector('.total-price2'); // rechter sidebar in html
 let thirthprice = document.querySelector('.total-price3'); // rechter sidebar in html
@@ -43,7 +47,7 @@ function showInPage(data) {
     for (let i = 0; i < data.games.length; i++) {
         const game = data.games[i];
         console.log(game);
-        sidebar.innerHTML += `<p> + ${game.name}:${game.description} en wlke platform:${game.platform}: ${game.price} </p>`;
+        sidebar.innerHTML += `<p class="price-item"> + ${game.name}:${game.description} en wlke platform:${game.platform}: ${game.price} </p>`;
     };
      // De data word hier in de console gezet 
      //met dit geeft het alleen object aan daarom hierbenden
@@ -60,26 +64,51 @@ let plus = 1; // Dit komt er elke keer bij
 let plus2 = 1; // Dit komt er elke keer bij 
 let plus3 = 1; // Dit komt er elke keer bij 
 let plus4 = 1; // Dit komt er elke keer bij 
+let minus = 1;// Dit gaat er elke keer af
+let minus2 = 1;// Dit gaat er elke keer af
+let minus3 = 1;// Dit gaat er elke keer af 
+let minus4 = 1;// Dit gaat er elke keer af
 
-
+// Dit is voor de plus button 
 button.addEventListener("click", function () {
     button.textContent = count + 1// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     price.textContent = count + plus++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     total.innerHTML = 59,99 * price// verandert de totale price
 });
 
+// Dit zorgt ervoor dat de aantal naar beneden gaat
+min1button.addEventListener("click", function () {
+    button.textContent = count2 + 1// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    price.textContent = count2 - minus2--
+});
+
+// Dit is voor de plus button 
 secondbutton.addEventListener("click", function() {
     secondbutton.textContent = count2 + 1;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     secondprice.textContent = count2 + plus2++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     total.innerHTML = 69,99 * price// verandert de totale price
 });
 
+// Dit zorgt ervoor dat de aantal naar beneden gaat
+min2button.addEventListener("click", function () {
+    button.textContent = count3 + 1// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    price.textContent = count3 - minus3--
+});
+
+// Dit is voor de plus button 
 thirthbutton.addEventListener("click", function() {
     thirthbutton.textContent = count3 + 1;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     thirthprice.textContent = count3 + plus3++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     total.innerHTML = 79,99 * price// verandert de totale price
 });
 
+// Dit zorgt ervoor dat de aantal naar beneden gaat
+min4button.addEventListener("click", function () {
+    button.textContent = count4 + 1// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
+    price.textContent = count4 - minus4--
+});
+
+// Dit is voor de plus button 
 forthbutton.addEventListener("click", function() {
     forthbutton.textContent = count4 + 1;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
     forthprice.textContent = count4 + plus4++;// Zorgt ervoor dat de button de nummer omhoog haald op de pagina
